@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahDaftar"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etBerat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berat Badan"/>
+
+    <EditText
+        android:id="@+id/etDarah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tekanan Darah"/>
+
+    <EditText
+        android:id="@+id/etCatatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Catatan"/>
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah"/>
+
+</LinearLayout>
