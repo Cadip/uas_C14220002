@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var DB : historyKesehatanDB
     private lateinit var adapterHistory: adapterHistory
     private var arHistory : MutableList<historyKesehatan> = mutableListOf()
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         DB = historyKesehatanDB.getDatabase(this)
         var _rvNotes = findViewById<RecyclerView>(R.id.rvNotes)
         var _fabAdd = findViewById<FloatingActionButton>(R.id.fabAdd)
+        val _btnDownload = findViewById<FloatingActionButton>(R.id.fabDownload)
+        val _btnUpload = findViewById<FloatingActionButton>(R.id.fabUpload)
 
         _rvNotes.layoutManager = LinearLayoutManager(this)
         _rvNotes.adapter = adapterHistory
